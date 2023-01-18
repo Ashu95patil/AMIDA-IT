@@ -16,7 +16,7 @@ public class ServiceImpl implements ServiceI {
 	public boolean SaveUseRegistration(User u) {
 		
 		 User save = this.userRepository.save(u);
-		if(save !=null) {
+		if(save != null && save.getUserid()!=null) {
 			return true;
 		}else {
 		return false;

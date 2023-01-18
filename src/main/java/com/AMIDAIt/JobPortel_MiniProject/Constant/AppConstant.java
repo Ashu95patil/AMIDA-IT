@@ -12,7 +12,10 @@ public class AppConstant {
 	
 	public static final String INDEX = "Index";
 	
-	public static final String CONTACT = "contact";
+	public static final String REGISTRATION = "Registration";
+	
+	public static final String LOGIN = "Login";
+
 	
 	public static final String CONTACTINFO = "contactInfo";
 	

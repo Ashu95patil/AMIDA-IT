@@ -28,7 +28,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="User_Id")
-	private long userid;
+	private Integer userid;
 	
 	@Column(name="User_Name")
     private String name;
@@ -40,7 +40,7 @@ public class User {
     private String password;
 	
 	@Column(name="User_MobNo")
-     private int MobNo;
+     private long MobNo;
 	
 	@Column(name="Create_date",updatable =  false)
     @CreationTimestamp
