@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"  %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,55 +10,48 @@
 <title>www.AMIDAIT.com</title>
 
 
+
 </head>
 
-<body>
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+<body bgcolor="Skyblue">
+
+<font color='green'> ${success} </font>
+<font color='red'>  ${fail}</font>
+
+
+<form:form action="saveUser? userid=${user.userid}"  modelAttribute="user" method="POST">
+
+
+
+<h2>User Registration Form</h2>
+
+  <label for="userid">User Id:</label><br>
+  <input type="text" id="userid" name="userid" ><br>
+
+  <label for="name">Full name:</label><br>
+  <input type="text" id="name" name="name" ><br>
+  <label for="emailid">Email Id:</label><br>
+  <input type="email" id="emailid" name="emailid"><br>
+    <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br>
+    <label for="MobNo">Contact No:</label><br>
+  <input type="number" id="MobNo" name="MobNo"><br><br>
+  
+  		<button type="submit" class="btn"><b>Register</b></button>
+  
+  
+
+
+<p>Note that the form itself is not visible.</p>
+
+<p>Also note that the default width of text input fields is 20 characters.</p>
+
+
+
+<a  href = "ViewUser">View All Users</a>
+
+</form:form>
+
 
 </body>
 </html>

@@ -10,11 +10,16 @@
 </head>
 <body bgcolor="pink" align="center">
 
-	<form action="Register">
-		<button type="submit" class="btn">Register</button>
-		<button type="Login" class="btn">Login</button>
+	
+			<a  href = "Register">Register</a>
 
-	</form>
+			<a  href = "login">Login</a>
+
+		
+			
+
+	
+	
 
 </body>
 </html>

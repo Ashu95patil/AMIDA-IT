@@ -1,6 +1,7 @@
 package com.AMIDAIt.JobPortel_MiniProject.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.AMIDAIt.JobPortel_MiniProject.Entity.User;
@@ -15,8 +16,9 @@ public class ServiceImpl implements ServiceI {
 	@Override
 	public boolean SaveUseRegistration(User u) {
 		
+
 		 User save = this.userRepository.save(u);
-		if(save != null && save.getUserid()!=null) {
+		if(save != null && save.getUserid()!=null && save.getEmailid()!=null &&save.getPassword()!=null) {
 			return true;
 		}else {
 		return false;
